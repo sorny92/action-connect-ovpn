@@ -79,12 +79,6 @@ and encode those values to base64. Then save those values (without a new line!) 
 `<ca></ca>`
 `<cert></cert>`
 `<key></key> `
-and replace the values with
-```
-ca ca.crt
-cert user.crt
-key user.key
-```
 
 This will allow the values to be filled in from Github secrets.
 
