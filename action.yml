@@ -48,7 +48,7 @@ runs:
         echo "$USER_CRT" | base64 -d > user.crt
         echo "$USER_KEY" | base64 -d > user.key
         echo "$SECRET" | base64 -d > secret.txt
-        sudo openvpn --config ${{ inputs.FILE_OVPN }} --ca ca.crt --cert user.crt --key user.key --tls-auth tls.key --askpass secret.txt --daemon
+        sudo openvpn --config ${{ inputs.FILE_OVPN }} --ca ca.crt --cert user.crt --key user.key --tls-crypt tls.key --askpass secret.txt --daemon
 
     - name: VPN Status
       id: vpn_status
